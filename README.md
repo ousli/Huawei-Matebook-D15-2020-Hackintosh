@@ -59,7 +59,7 @@
 ![Mount Partition](img/mount.png)
 17. Copy the content of the EFI folder from the USB to the EFI folder on the laptop (Replace files if necessary)
 18. In the OC/ folder (on the laptop) open config.plist, it'll open with OpenCore Configurator
-19. Change `Launcher Option` from `None` to `Short`
+19. Change `Launcher Option` from `Disabled` to `Short`
 ![Launcher Option](img/opencore.png) 
 20. Save and close OpenCore Configurator. Remove your USB key
 21. Restart your computer and enter to BIOS

@@ -59,7 +59,7 @@
 ![Mount Partition](img/mount.png)
 17. Copiez le contenus du dossier EFI de la clée USB dans le dossier EFI folder du pc portable (Remplacez les fichiers si nécéssaire)
 18. Dans le dossier OC/ (sur le pc portable) ouvrez config.plist, il devrait s'ouvrir avec OpenCore Configurator
-19. Changez `Launcher Option` de `None` à `Short`
+19. Changez `Launcher Option` de `Disabled` à `Short`
 ![Launcher Option](img/opencore.png) 
 20. Sauvegardez et fermez OpenCore Configurator. Retirez la clée USB
 21. Redémarrez votre ordinateur et entrez dans le BIOS
