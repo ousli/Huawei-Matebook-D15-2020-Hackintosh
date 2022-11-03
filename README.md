@@ -9,6 +9,9 @@
 - **Wifi/Bluetooth :** Intel Wireless-AC 9560 160 MHz
 - **Stockage :** ~~SAMSUNG MZVLB256HBHQ-00000~~\ (Replaced with **Crucial P3 500Go CT500P3SSD8**)
 
+## Software
+- Dualboot Windows 11 / MacOS Montery
+
 ## Working ✅:
 - Wifi
 - Bluetooth
@@ -19,10 +22,8 @@
 
 ## Not working ❌:
 - Audio
+- HMDI Audio
 - Battery Level buggy *(Small percentage difference between mac and windows)*
-
-## Software
-- Dualboot Windows 11 / MacOS Montery
 
 ## Guide
 ### Windows Installation
@@ -47,7 +48,21 @@
 ![Format partition](img/erase.png)
     - Click on Erase
 9. Go back to installation page
-10. Select 
-
-
-
+10. Select `Install MacOS Montery`
+11. Select your partition
+12. Wait for the end. If your computer restart be careful to select your bootable USB in boot menu
+13. After finish the configuration, download [OpenCore Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
+14. Launch it.
+15. Click on the OpenCore Configurator icon on the status bar
+16. Mount the EFI partition of the laptop and the EFI partition of the USB
+![Mount Partition](img/mount.png)
+17. Copy the content of the EFI folder from the USB to the EFI folder on the laptop (Replace files if necessary)
+18. In the OC/ folder (on the laptop) open config.plist, it'll open with OpenCore Configurator
+19. Change `Launcher Option` from `None` to `Short`
+![Launcher Option](img/opencore.png) 
+20. Save and close OpenCore Configurator. Remove your USB key
+21. Restart your computer and enter to bios
+22. Disabled the boot of the partition with Windows (Test to find which one it is)
+![Bios](img/bios.jpg)
+23. Save and exit
+24. Now, your computer will boot to the OpenCore menu and you can choose between Windows and MacOS
