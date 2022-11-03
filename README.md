@@ -1,4 +1,5 @@
 # Huawei Matebook D15 2020 Hackintosh
+[Français 🇫🇷](README-fr.md) | [English 🇬🇧](README.md)
 
 ## Specs:
 - **CPU :** Intel Core i3 1011U
@@ -23,7 +24,7 @@
 ## Not working ❌:
 - Audio
 - HMDI Audio
-- Battery Level buggy *(Small percentage difference between mac and windows)*
+- Battery Level buggy *(Small percentage difference between MacOS and Windows)*
 
 ## Guide
 ### Windows Installation
@@ -36,14 +37,14 @@
 7. Create a new simple volume with the unallocated storage and name it
 
 ### MacOS Installation
-1. Prepare the USB key for MacOS with [Open Core Guide](https://dortania.github.io/OpenCore-Install-Guide/)
+1. Prepare the USB key for MacOS with the [OpenCore Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 2. When it's done reboot your computer and open the BIOS `(F2 for Huawei Laptop)`
 3. Disable `Secure Boot`
 4. Save and exit `(F10 for Huawei Laptop)`
 5. Open boot menu `(F12 for Huawei Laptop)`
 6. Select your bootable USB key
 7. Open disk utility
-8. - Select the partition you named before
+8. - Select the partition you created before
    - Format the partition with APFS format
 ![Format partition](img/erase.png)
     - Click on Erase
@@ -61,8 +62,8 @@
 19. Change `Launcher Option` from `None` to `Short`
 ![Launcher Option](img/opencore.png) 
 20. Save and close OpenCore Configurator. Remove your USB key
-21. Restart your computer and enter to bios
-22. Disabled the boot of the partition with Windows (Test to find which one it is)
+21. Restart your computer and enter to BIOS
+22. Disabled the boot of the Windows partition  (Test to find which one it is)
 ![Bios](img/bios.jpg)
 23. Save and exit
 24. Now, your computer will boot to the OpenCore menu and you can choose between Windows and MacOS
