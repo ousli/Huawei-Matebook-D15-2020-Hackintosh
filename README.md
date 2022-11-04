@@ -24,6 +24,8 @@
 ## Not working ❌:
 - Audio
 - HMDI Audio
+
+## Bugs 🔁:
 - Battery Level buggy *(Small percentage difference between MacOS and Windows)*
 
 ## Guide

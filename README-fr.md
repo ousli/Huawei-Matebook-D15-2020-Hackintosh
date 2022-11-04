@@ -24,6 +24,8 @@
 ## Ne marche pas ❌:
 - Audio
 - HMDI Audio
+
+## Bugs 🔁:
 - Niveau de batterie buggué *(Petite diffférence de pourcentage entre MacOS & Windows)*
 
 ## Guide
