@@ -11,7 +11,7 @@
 - **Stockage :** ~~SAMSUNG MZVLB256HBHQ-00000~~\ (Remplacé par **Crucial P3 500Go CT500P3SSD8**)
 
 ## Logiciel
-- Dualboot Windows 11 / MacOS Montery
+- Dualboot Windows 11 / MacOS Ventura
 
 ## Marche ✅:
 - Wifi
@@ -54,18 +54,35 @@
 10. Sélectionnez `Install MacOS Montery`
 11. Sélectionnez votre partition
 12. Attendez la fin. Si votre ordinateur redémarre faites attention à sélectionner la clée USB bootable dans le menu de boot
-13. Après avoir finis la configuration, télécharger [OpenCore Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
-14. Lancez le.
-15. Cliquez sur l'icon OpenCore Configurator dans la barre de status
-16. Montez la partition EFI du pc portable et la partition EFI de la clée USB
+
+### Configuration et démarrage de MacOS
+1. Après avoir finis la configuration, télécharger [OpenCore Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
+2. Lancez le.
+3. Cliquez sur l'icon OpenCore Configurator dans la barre de status
+4. Montez la partition EFI du pc portable et la partition EFI de la clée USB
 ![Mount Partition](img/mount.png)
-17. Copiez le contenus du dossier EFI de la clée USB dans le dossier EFI folder du pc portable (Remplacez les fichiers si nécéssaire)
-18. Dans le dossier OC/ (sur le pc portable) ouvrez config.plist, il devrait s'ouvrir avec OpenCore Configurator
-19. Changez `Launcher Option` de `Disabled` à `Short`
+5.  Copiez le contenus du dossier EFI de la clée USB dans le dossier EFI folder du pc portable (Remplacez les fichiers si nécéssaire)
+6.  Dans le dossier OC/ (sur le pc portable) ouvrez config.plist, il devrait s'ouvrir avec OpenCore Configurator
+7.  Changez `Launcher Option` de `Disabled` à `Short`
 ![Launcher Option](img/opencore.png) 
-20. Sauvegardez et fermez OpenCore Configurator. Retirez la clée USB
-21. Redémarrez votre ordinateur et entrez dans le BIOS
-22. Désactivez le boot de la partition Windows (Testez pour savoir laquelle c'est)
+8.  Sauvegardez et fermez OpenCore Configurator. Retirez la clée USB
+.  Redémarrez votre ordinateur et entrez dans le BIOS
+9.  Désactivez le boot de la partition Windows (Testez pour savoir laquelle c'est)
 ![Bios](img/bios.jpg)
-23. Enregistez et quittez
-24. Maintenant, votre ordinateur devrait démarrer sur le menu OpenCore et vous pourrez choisir entre Windows et MacOS
+10.  Enregistez et quittez
+11.  Maintenant, votre ordinateur devrait démarrer sur le menu OpenCore et vous pourrez choisir entre Windows et MacOS
+
+## Note: Si la partition n'apparait pas dans le BIOS
+1. Démarrer votre pc sur Windows
+2. Télécharger et installer la version d'essaie de [EasyUEFI](https://www.easyuefi.com/index-us.html)
+3. Lancer EasyUEFI
+4. Sélectionner l'option de gauche 
+![alt](img/easyuefi-1.png)
+5. Dans la nouvelle fenêtre, selectionner le deuxième bouton en partant du haut
+![alt](img/easyuefi-2.png)
+6. Dans la fenetre qui s'affiche modifier le Type d'OS, la description, puis choisissez la partition EFI (Normalement elle se situe tout à gauche et elle fait 100 mo). Puis cliquez sur parcour en bas à droite
+![alt](img/easyuefi-3.png)
+7. Dans la fenêtre popup, naviguez vers le fichier BOOTx64.efi, selectiopnnez le, cliquez sur "ok" une première fois, puis une deuxième fois*
+![alt](img/easyuefi-4.png)
+8. Vous pouvez fermez EasyUEFI et redémarrer votre pc dans le BIOS. Vous devriez maintenant y voir apparaitre la seconde partition
+9. Comme toute vu au dessus, désactivez le boot de la partiton Windows en testant l'une après l'autre 
